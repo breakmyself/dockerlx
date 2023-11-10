@@ -1,0 +1,10 @@
+使用方法：
+  镜像地址：dockerk8s1/btpaneloracle23c:v1.0
+  运行容器：docker run -itd --name dapaooracle23 -h dapaooracle23   -p 1521:1521 -p 38389:3389  -v /sys/fs/cgroup:/sys/fs/cgroup    --privileged=true dockerk8s1/btpaneloracle23c:v1.0    /usr/sbin/init
+  进入容器：docker exec -it dapaooracle23 /bin/bash
+  查看oracle的运行状态：/etc/init.d/oracle-free-23c status
+  启动oracle：/etc/init.d/oracle-free-23c start
+  切换到oracle账号： su - oracle
+  进入到oracle数据库里：sas
+
+感谢小麦苗老师的指点。
